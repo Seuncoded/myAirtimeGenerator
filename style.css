@@ -3,17 +3,23 @@ body{
     align-items: center;
     height: 100vh;
     justify-content: center;
+    background-image: linear-gradient(to bottom right, #2A0C4E , #320A28);
 }
 
 .rechargeCardContainer{
     width: 500px;
     height: 300px;
-    border: 1px solid lightgrey;
+    border: none;
     text-align: center;
     /* background-color: #0B3C49; */
     background-image: linear-gradient(to bottom right, #388659 , #3AAED8);
-
+    border-radius: 20px;
+    transition: box-shadow 1s ease-out;
     
+}
+
+.rechargeCardContainer:hover{
+    box-shadow: 5px 5px 5px 5px #F28F3B;
 }
 
 #network {
