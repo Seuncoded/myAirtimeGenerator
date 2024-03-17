@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<h1 id="airtimeDisplayScreen"></h1>
+
+<select name="" id="network"> 
+    <option value="">Network</option>
+    <option value="mtn" id="mtn">MTN</option>
+    <option value="glo">GLO</option>
+    <option value="airtel">AIRTEL</option>
+    <option value="9mobile">9Mobile</option>
+
+</select>
+
+<select name="" id="amount"> 
+    <option value="">Amount</option>
+    <option value="100">100</option>
+    <option value="200">200</option>
+    <option value="500">500</option>
+    <option value="1000">1000</option>
+
+</select>
+
+<button onclick="pinGenerate()">Generate Pin</button>
+
+
+<br><br><br>
+
+<input type="text" id="loadCard">
+<button onclick="loadAirtime()">Load Airtime</button>
+
+
+
+
+</body>
+</html>
+<!-- <script src="main.js"></script> -->
+<script>
+
+let cards = document.getElementById('airtimeDisplayScreen');
+let newCard = Math.floor(Math.random() * 10000000000000000)
+let network = document.getElementById('network')
+let amounts = document.getElementById('amount')
+let airtime ;
+
+function pinGenerate() {
+    // cards.innerHTML = Math.floor(Math.random(newCard) * 100000000000000);
+    if (network.value == "" || amounts.value ==""){
+        alert("Select Amounts and Your Preffered Services Provider")
+    }else{
+       airtime = Math.floor(Math.random(newCard) * 100000000000000);
+       cards.innerHTML = airtime;
+    }
+}
+
+
+
+
+
+let cardEnter = document.getElementById('loadCard')
+
+function loadAirtime() {
+
+    if (cardEnter.value == ""){
+        alert("Fill the Input")
+    } 
+    else if (cardEnter.value.startsWith("*311*") && cardEnter.value .includes(airtime) && cardEnter.value.endsWith("#") ){
+        alert(` you have successfully recharge  ${network.value}  ${amounts.value} airtime`)
+    }else{
+        alert('Incorret Pin')
+    }
+    console.log(network .value);
+    console.log(amounts.value);
+
+
+}
+
+</script>
