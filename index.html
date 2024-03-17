@@ -8,36 +8,44 @@
 </head>
 <body>
     
+<div class="rechargeCardContainer">
 
-<h1 id="airtimeDisplayScreen"></h1>
+<div class="displayScreen">
+    <h1 id="airtimeDisplayScreen"></h1>
+</div>
 
-<select name="" id="network"> 
-    <option value="">Network</option>
-    <option value="mtn" id="mtn">MTN</option>
-    <option value="glo">GLO</option>
-    <option value="airtel">AIRTEL</option>
-    <option value="9mobile">9Mobile</option>
-
-</select>
-
-<select name="" id="amount"> 
-    <option value="">Amount</option>
-    <option value="100">100</option>
-    <option value="200">200</option>
-    <option value="500">500</option>
-    <option value="1000">1000</option>
-
-</select>
+<div class="optionPick">
+    <select name="" id="network"> 
+        <option value="">Network</option>
+        <option value="mtn" id="mtn">MTN</option>
+        <option value="glo">GLO</option>
+        <option value="airtel">AIRTEL</option>
+        <option value="9mobile">9Mobile</option>
+    
+    </select>
+    
+    <select name="" id="amount"> 
+        <option value="">Amount</option>
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+    
+    </select>
+</div>
 
 <button onclick="pinGenerate()">Generate Pin</button>
 
 
-<br><br><br>
-
+<div class="loadYourCard">
 <input type="text" id="loadCard">
 <button onclick="loadAirtime()">Load Airtime</button>
+</div>
 
 
+
+
+</div>
 
 
 </body>

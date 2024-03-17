@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.rechargeCardContainer{
+    width: 500px;
+    height: 300px;
+    border: 1px solid lightgrey;
+    text-align: center;
+    /* background-color: #0B3C49; */
+    background-image: linear-gradient(to bottom right, #388659 , #3AAED8);
+
+    
+}
+
+#network {
+    padding: 5px 50px;
+    font-size: 16px;
+    background-color: #3B5249;
+    border: none;
+    color: white;
+}
+
+#amount {
+    padding: 5px 50px;
+    font-size: 16px;
+    background-color: #3B5249;
+    border: none;
+    color: white;
+}
+
+
+button{
+    padding: 7px 40px;
+    background-color: #C97064;
+    margin-top: 50px;
+    border: none;
+    font-size: 14px;
+    color: white;
+}
+
+input{
+    padding: 7px 40px;
+    background-color: hsl(0, 0, 80%);
+    border: none;
+}
+
+h1{
+    color: white;
+
+}
+
+.displayScreen{
+    height: 30px;
+    width: 100%;
+    margin-bottom: 5px;
+}
